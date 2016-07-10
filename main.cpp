@@ -1,7 +1,7 @@
 /* 
+ * iNSTALAR: http://www.rafaeltoledo.net/compilando-e-instalando-a-biblioteca-allegro-5-no-ubuntu/
  * 
- * gcc main.c -o teste -lallegro_image -lallegro
- * 
+ * PARA COMPILAR: gcc main.c -o teste -lallegro_image -lallegro 
  * 
  * File:   main.cpp
  * Author: daniloalves

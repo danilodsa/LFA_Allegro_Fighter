@@ -4,7 +4,7 @@
  * PARA COMPILAR: gcc main.c -o teste -lallegro_image -lallegro 
  * 
  * File:   main.cpp
- * Author: daniloalves
+ * Author: Danilo Alves && Fellipe Eduardo
  *
  * Created on 10 de Julho de 2016, 03:22
  * 

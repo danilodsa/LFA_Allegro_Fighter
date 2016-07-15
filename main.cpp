@@ -47,7 +47,7 @@ int main(void)
     // Segura a execução por 10 segundos
     al_rest(10.0);
  
-    // Finaliza a janela
+    // Finaliza a janela quando o estado for o 10 (pressionar esc)
     al_destroy_display(janela);
  
     return 0;

@@ -7,6 +7,15 @@
  * Author: daniloalves
  *
  * Created on 10 de Julho de 2016, 03:22
+ * 
+ * 
+ * w = PULAR -> ESTADO 5
+ * s = ABAIXAR -> ESTADO 2
+ * u = SOCO -> ESTADO 3
+ * i = CHUTE -> ESTADO 4
+ * x = SAIR -> ESTADO 10
+ * 
+ * 
  */
 
 #include <cstdlib>

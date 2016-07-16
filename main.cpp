@@ -23,10 +23,10 @@
 using namespace std;
 // Inclui o cabeçalho da bibilioteca Allegro 5
 #include <allegro5/allegro.h>
- 
+
 // Inclui o cabeçalho do add-on para uso de imagens
 #include <allegro5/allegro_image.h>
- 
+
 int main(void)
 {
     // Variável representando a janela principal
@@ -43,10 +43,10 @@ int main(void)
  
     // Configura a janela
     janela = al_create_display(640, 480);
- 
+    
     // Carrega a imagem
     imagem = al_load_bitmap("ninjamegazord.png");
- 
+    
     // Desenha a imagem na tela
     al_draw_bitmap(imagem, 0, 0, 0);
  

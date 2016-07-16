@@ -11,23 +11,27 @@
  * Created on 14 de Julho de 2016, 14:27
  */
 
-#ifndef PUPPET_H
-#define PUPPET_H
+#ifndef ANIMA_H
+#define ANIMA_H
 
 /*cria uma janela */
 void Instacia_Janela();
 
 /*lanca os frames relativos a animacao de chute*/
-void soca();
+void Soca();
 
 /*lanca os frames relativos a animacao de chutar*/
-void chuta();
+void Chuta();
 
 /*lanca os frames relativos a animacao de agachar*/
-void abaixa();
+void Pula();
 
 /*lanca os frames relativos a animacao de pulo*/
-void pula();
+void Rasteira();
 
-#endif /* PUPPET_H */
+void Combo_1();
+
+void Combo_2();
+
+#endif /* ANIMA_H */
 

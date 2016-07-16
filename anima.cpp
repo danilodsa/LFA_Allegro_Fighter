@@ -12,4 +12,34 @@
 // Inclui o cabeçalho do add-on para uso de imagens
 #include <allegro5/allegro_image.h>
 
+#include "anima.h"
+
 using namespace std;
+
+void Instacia_Janela()
+{
+    
+}
+
+void Soca()
+{
+    
+}
+
+void Chuta()
+{
+    
+}
+
+void Pula()
+{
+    
+}
+
+void Rasteira()
+{
+    
+}
+
+void Combo_1();
+void Combo_2();

@@ -16,17 +16,17 @@
 
 #include <cstdlib>
 #include <string>
+#include "anima.h"
 
 /*estrutura gravadora do automato*/
 typedef struct af AF;
 
-/*Gera uma estrutura do tipo AF, com uma matriz vazia e um char com o alfabeto*/
-AF* CriaAF(char* alfabeto, int num_estados);
+AF* AFcarregaAutomato(char* arq_nome);
 
-/*insere uma transicao na matriz do automato*/
+AF* AFCria(char* alfabeto, int num_estados);
+        
 void CriaTransicao(AF *af,int e1,char s,int e2);
 
-/*move entre as transicoes do automato de acordo com o comando especeficado*/
 void Movimenta(AF *af,char comando);
 
 #endif /* AUTOMATO_H */

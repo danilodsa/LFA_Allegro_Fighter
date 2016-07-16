@@ -14,6 +14,9 @@ struct af{
     /*vetor que contem os simbolos do alfabeto*/
     string alfabeto;
     
+    /*indica qual e o estado atual*/
+    int     atual;
+    
     /*quantidade de estados*/
     int     quant_estado;
     
@@ -47,6 +50,10 @@ AF* CriaAF(char* alfabeto, int num_estados)
         }
     }
     
+    /*define o estado inicial como o atual no momento em que retorna o
+     automato*/
+    af->atual = 1;
+    
     return af;
 }
 
@@ -63,5 +70,42 @@ void CriaTransicao(AF *af,int e1,char s,int e2)
 
 void Movimenta(AF *af,char comando)
 {
-    
+    switch(af->atual)
+    {
+        case 0:
+            switch(comando)
+            {
+                case 'w':
+                    break;
+                case 's':
+                    break;
+                case 'u':
+                    break;
+                case 'i':
+                    break;
+                case 'x':
+                    break;
+            }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            break;
+        case 8:
+            break;
+        case 9:
+            break;
+        case 10:
+            break;
+    }
 }

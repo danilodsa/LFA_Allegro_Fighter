@@ -6,33 +6,18 @@
 
 #define quant_estados 10
 
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
-#include <string.h>
-
 #include "automato.h"
 
 using namespace std;
 
-struct af{
-    /*vetor que contem os simbolos do alfabeto*/
-    string alfabeto;
-    
-    /*indica qual e o estado atual*/
-    int     atual;
-    
-    /*quantidade de estados*/
-    int     quant_estado;
-    
-    /*matriz equivalente ao automato criado*/
-    int**   estados;
-};
-
-AF* AFCria(char* alfabeto, int num_estados)
+AF* AFCria(std::string alfabeto, int num_estados)
 {
     AF* af;
-
+    
+    af = new AF;
+        
+    af->quant_simbolos = alfabeto.length();
+    
     /*grava o alfabeto*/
     af->alfabeto = alfabeto;
     
@@ -42,11 +27,11 @@ AF* AFCria(char* alfabeto, int num_estados)
     /*matriz de estados*/
     /*aloca a linha da matriz, a dimensao da linha e igual a quantidade de 
      simbolos q o alfabeto possui */
-    af->estados = (int**) malloc(sizeof(int*)*af->alfabeto.size());
+    af->estados = (int**) malloc(sizeof(int*)*af->quant_estado);
     int i,j;
     for(i=0;i<af->quant_estado;i++)
     {
-        af->estados[i] = (int*) malloc(sizeof(int)*af->quant_estado);
+        af->estados[i] = (int*) malloc(sizeof(int)*af->alfabeto.size());
         for(j=0;j<af->quant_estado;j++)
         {
             /*estados podem ser identificados por zero, logo a matriz
@@ -68,7 +53,8 @@ void AFcriaTransicao(AF *af,int e1,char s,int e2)
     
     /*retorna a posicao de um caracter na string do alfabeto
      o mesmo e utilizado para definir a coluna de e2*/
-    pertence_transicao = af->alfabeto.find(s,0);
+    
+    pertence_transicao = af->alfabeto.find(s);
     
     af->estados[e1][pertence_transicao] = e2;
 }
@@ -93,25 +79,19 @@ void AFMovimenta(AF *af,char comando)
         case 0:
             break;
         case 1:
-            Rasteira();
             break;
         case 2:
-            Soca();
             break;
         case 3:
-            Chuta();
             break;
         case 4:
-            Pula();
             break;
         case 5:
-            Soca();
             break;
         case 6:
         //Combo_2();
             break;
         case 7:
-            Chuta();
             break;
         case 8:
         //Combo_1();
@@ -123,11 +103,11 @@ void AFMovimenta(AF *af,char comando)
     }
 }
 
-AF* AFcarregaAutomato(char* arq_nome)
+AF* AFcarregaAutomato(std::string arq_nome)
 {
     ifstream    arq;
-    
-    arq.open(arq_nome,ios::in);
+      
+    arq.open(arq_nome.c_str(),ios::in);
     
     if(arq)
     {
@@ -139,11 +119,7 @@ AF* AFcarregaAutomato(char* arq_nome)
         arq >> auxStr;        
         arq >> auxInt;
         
-        char*       temp = new char[auxStr.length()];
-        
-        strcpy(temp,auxStr.c_str());
-        
-        af = AFCria(temp,auxInt);
+        af = AFCria(auxStr,auxInt);
         
         while(!arq.eof())
         {
@@ -153,5 +129,7 @@ AF* AFcarregaAutomato(char* arq_nome)
             
             AFcriaTransicao(af,auxInt,auxStr[0],destino);
         }
+        
+        return af;
     }
 }

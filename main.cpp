@@ -19,6 +19,8 @@
  */
 
 #include <cstdlib>
+#include <iostream>
+#include <string>
 #include "automato.h"
 
 using namespace std;
@@ -29,7 +31,22 @@ using namespace std;
 #include <allegro5/allegro_image.h>
 
 int main(void)
-{    
-    AFcarregaAutomato("automato.txt");
+{
+    AF *eta;
+    
+    eta = AFcarregaAutomato("teste.txt");
+    
+    int i,j,max;
+    
+    max = eta->alfabeto.length();
+    
+    for(i=0;i<eta->quant_estado;i++)
+    {
+        for(j=0;j<max;j++)
+        {
+            cout << eta->estados[i][j] << " ";
+        }
+        cout << "\n";
+    }  
 }
 

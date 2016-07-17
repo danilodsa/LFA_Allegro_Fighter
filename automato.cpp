@@ -62,7 +62,7 @@ AF* AFCria(char* alfabeto, int num_estados)
     return af;
 }
 
-void CriaTransicao(AF *af,int e1,char s,int e2)
+void AFcriaTransicao(AF *af,int e1,char s,int e2)
 {
     int     pertence_transicao;
     
@@ -73,7 +73,7 @@ void CriaTransicao(AF *af,int e1,char s,int e2)
     af->estados[e1][pertence_transicao] = e2;
 }
 
-void Movimenta(AF *af,char comando)
+void AFMovimenta(AF *af,char comando)
 {
     int     movimento;
     int     prox_estado;
@@ -151,7 +151,7 @@ AF* AFcarregaAutomato(char* arq_nome)
             arq >> auxStr;
             arq >> destino;
             
-            CriaTransicao(af,auxInt,auxStr[0],destino);
+            AFcriaTransicao(af,auxInt,auxStr[0],destino);
         }
     }
 }

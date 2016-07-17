@@ -8,25 +8,15 @@
  * File:   automato.h
  * Author: fellipe
  *
- * Created on 14 de Julho de 2016, 14:28
+ * Created on 17 de Julho de 2016, 01:30
  */
 
 #ifndef AUTOMATO_H
 #define AUTOMATO_H
 
-#include <cstdlib>
-#include <string>
-#include "anima.h"
+typedef struct 
 
-/*estrutura gravadora do automato*/
-typedef struct af AF;
-
-AF* AFcarregaAutomato(char* arq_nome);
-
-AF* AFCria(char* alfabeto, int num_estados);
-        
-void CriaTransicao(AF *af,int e1,char s,int e2);
-
-void Movimenta(AF *af,char comando);
+AF* AFCria(char* alfabeto, int num_estados)
 
 #endif /* AUTOMATO_H */
+

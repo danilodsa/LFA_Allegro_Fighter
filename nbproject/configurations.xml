@@ -4,13 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
-      <itemPath>anima.h</itemPath>
       <itemPath>automato.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>anima.cpp</itemPath>
       <itemPath>automato.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -40,10 +38,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="anima.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="anima.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="automato.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="automato.h" ex="false" tool="3" flavor2="0">
@@ -71,10 +65,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="anima.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="anima.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="automato.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="automato.h" ex="false" tool="3" flavor2="0">
